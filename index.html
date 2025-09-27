@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" x-data="window.appData">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Polar Express - Shop in the U.S. and Canada — Ship Direct to
+    Dubai
+  </title>
+  <meta name="description"
+    content="Shop from top retailers in the USA, and Canada with Polar Express. Get your personal virtual addresses and ship directly to Dubai with fast, affordable delivery.">
+  <link rel="icon" type="image/x-icon" href="./assets/logo/favicon.ico">
+
+  <!-- CSS -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+
+  <!-- Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <!-- Custom Fonts -->
+  <style>
+    @font-face {
+      font-family: "MuseoSans";
+      src: url("./assets/fonts/MuseoSansRegular.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "MuseoSans";
+      src: url("./assets/fonts/MuseoSansBold.woff") format("woff");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      font-family:
+        "MuseoSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        sans-serif;
+    }
+
+    .gradient-overlay {
+      background: linear-gradient(135deg,
+          rgba(37, 99, 235, 0.9) 0%,
+          rgba(59, 130, 246, 0.8) 100%);
+    }
+
+    .shipping-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-museo">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300" x-data="{ scrolled: false }"
+    @scroll.window="scrolled = window.pageYOffset > 50" :class="{ 'shadow-xl': scrolled }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="https://en.polexp.com/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 flex items-center">
+          <img class="h-10 w-auto lg:h-12" src="./assets/logo/logo.avif" alt="">
+          <span class="ml-3 text-xl lg:text-2xl font-bold text-polar-blue">Polar Express</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-polar-blue font-medium py-2 px-1"
+            x-text="translations[language].nav.home"></a>
+          <a href="#shops" class="text-gray-700 hover:text-polar-blue font-medium py-2 px-1"
+            x-text="translations[language].nav.shops"></a>
+          <a href="#how-it-works" class="text-gray-700 hover:text-polar-blue font-medium py-2 px-1"
+            x-text="translations[language].nav.howItWorks"></a>
+          <a href="#products" class="text-gray-700 hover:text-polar-blue font-medium py-2 px-1"
+            x-text="translations[language].nav.products"></a>
+
+          <div class="flex items-center space-x-2 px-3 py-2">
+            <a href="https://en.polexp.com/" target="_blank" rel="noopener noreferrer"
+              class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 bg-polar-blue text-white">
+              PEX Home
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+          <button @click="mobileMenuOpen = !mobileMenuOpen"
+            class="text-gray-700 hover:text-polar-blue focus:outline-none focus:text-polar-blue transition-colors duration-200"
+            aria-controls="mobile-menu" :aria-expanded="mobileMenuOpen" aria-label="Open main menu">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+              <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 transform -translate-y-2"
+        x-transition:enter-end="opacity-100 transform translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 transform translate-y-0"
+        x-transition:leave-end="opacity-0 transform -translate-y-2" class="lg:hidden border-t border-gray-200 bg-white">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#home" class="block px-3 py-2" x-text="translations[language].nav.home"></a>
+          <a href="#shops" class="block px-3 py-2" x-text="translations[language].nav.shops"></a>
+          <a href="#how-it-works" class="block px-3 py-2" x-text="translations[language].nav.howItWorks"></a>
+          <a href="#products" class="block px-3 py-2" x-text="translations[language].nav.products"></a>
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="./assets/images/hero/DubaiHero.avif" alt="International Shipping"
+          class="w-full h-full object-cover">
+        <!-- gradient-overlay shipping-pattern -->
+        <div class="absolute inset-0"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+          x-text="translations[language].title">
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
+          x-text="translations[language].subtitle">
+        </p>
+        <a href="https://en.polexp.com/register" target="_blank" rel="noopener">
+          <button
+            class="cursor-pointer bg-white hover:bg-gray-100 text-polar-blue font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            x-text="translations[language].cta">
+          </button>
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+          </path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="sr-only">Our Statistics</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center group">
+            <div
+              class="bg-polar-blue/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-polar-blue/20 transition-colors duration-300">
+              <svg class="w-10 h-10 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4">
+                </path>
+              </svg>
+            </div>
+            <h3 class="counter text-3xl font-bold text-gray-900 mb-2" data-target="2000000">
+              0<span class="plus">+</span>
+            </h3>
+            <p class="text-gray-600 font-medium" x-text="translations[language].stats.parcels">
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div
+              class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors duration-300">
+              <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="counter text-3xl font-bold text-gray-900 mb-2" data-target="20">
+              0<span class="plus">+</span>
+            </h3>
+            <p class="text-gray-600 font-medium" x-text="translations[language].stats.countries">
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div
+              class="bg-yellow-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="counter text-3xl font-bold text-gray-900 mb-2" data-target="29">
+              0<span class="plus">+</span>
+            </h3>
+            <p class="text-gray-600 font-medium" x-text="translations[language].stats.years">
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shops Section -->
+    <section id="shops" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            x-text="translations[language].shops.title">
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8" x-text="translations[language].shops.subtitle">
+          </p>
+
+          <!-- Shop Region Buttons -->
+          <div class="flex justify-center space-x-4 mb-8">
+            <button @click="activeShopRegion = 'us'"
+              :class="activeShopRegion === 'us' ? 'bg-polar-blue text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
+              class="px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md cursor-pointer"
+              x-text="translations[language].shops.us">
+            </button>
+            <button @click="activeShopRegion = 'canada'"
+              :class="activeShopRegion === 'canada' ? 'bg-polar-blue text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
+              class="px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md cursor-pointer"
+              x-text="translations[language].shops.canada">
+            </button>
+          </div>
+        </div>
+
+        <!-- US Shops -->
+        <div x-show="activeShopRegion === 'us'"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <template x-for="shop in [
+  { href: 'https://www.amazon.com/', img: './assets/images/shops/usa/amazon.avif', alt: 'Amazon US', name: 'Amazon US', desc: translations[language].shops.list.amazonUS },
+  { href: 'https://www.nike.com/', img: './assets/images/shops/usa/Nike.avif', alt: 'Nike', name: 'Nike', desc: translations[language].shops.list.nike },
+  { href: 'https://www.bestbuy.com/', img: './assets/images/shops/usa/BestBuy.avif', alt: 'Best Buy', name: 'Best Buy', desc: translations[language].shops.list.bestbuy },
+  { href: 'https://www.macys.com/', img: './assets/images/shops/usa/macy.avif', alt: 'Macy\'s', name: 'Macy\'s', desc: translations[language].shops.list.macys },
+  { href: 'https://www.walmart.com/', img: './assets/images/shops/usa/walmart.avif', alt: 'Walmart', name: 'Walmart', desc: translations[language].shops.list.walmart },
+  { href: 'https://www.target.com/', img: './assets/images/shops/usa/target.avif', alt: 'Target', name: 'Target', desc: translations[language].shops.list.target },
+  { href: 'https://www.kohls.com/', img: './assets/images/shops/usa/khols.avif', alt: 'Kohl\'s', name: 'Kohl\'s', desc: translations[language].shops.list.kohls },
+  { href: 'https://www.staples.com/', img: './assets/images/shops/usa/staples.avif', alt: 'Staples', name: 'Staples', desc: translations[language].shops.list.staples },
+]" :key="shop.name">
+            <a :href="shop.href" target="_blank" rel="noopener noreferrer">
+              <div
+                class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden group">
+                <div class="relative overflow-hidden">
+                  <img :src="shop.img" :alt="shop.alt"
+                    class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2" x-text="shop.name">
+                  </h3>
+                  <p class="text-gray-600 text-sm" x-text="shop.desc"></p>
+                </div>
+              </div>
+            </a>
+          </template>
+        </div>
+
+        <!-- Canada Shops -->
+        <div x-show="activeShopRegion === 'canada'"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <template x-for="shop in [
+      { href: 'https://www.aritzia.com/us/en', img: './assets/images/shops/canada/Aritzia.avif', alt: 'Aritzia', name: 'Aritzia', desc: translations[language].shops.list.aritzia },
+      { href: 'https://www.memoryexpress.com/', img: './assets/images/shops/canada/memoryexpress.avif', alt: 'Memory Express', name: 'Memory Express', desc: translations[language].shops.list.memoryexpress },
+      { href: 'https://www.mec.ca/en', img: './assets/images/shops/canada/mec.avif', alt: 'Mountain Equipment Company', name: 'Mountain Equipment Company', desc: translations[language].shops.list.mec },
+      { href: 'https://www.roots.com/us/en/homepage', img: './assets/images/shops/canada/roots.avif', alt: 'Roots', name: 'Roots', desc: translations[language].shops.list.roots },
+      { href: 'https://www.sportchek.ca/en.html', img: './assets/images/shops/canada/sportchek.avif', alt: 'SportChek', name: 'SportChek', desc: translations[language].shops.list.sportchek },
+      { href: 'https://www.timhortons.ca/?lang=en&locale-selected=1', img: './assets/images/shops/canada/timhortons.avif', alt: 'Tim Hortons', name: 'Tim Hortons', desc: translations[language].shops.list.timhortons },
+      { href: 'https://well.ca/', img: './assets/images/shops/canada/well.avif', alt: 'Well.ca', name: 'Well.ca', desc: translations[language].shops.list.well },
+      { href: 'https://www.canadiantire.ca/', img: './assets/images/shops/canada/cantire.avif', alt: 'Canadian Tire', name: 'Canadian Tire', desc: translations[language].shops.list.canadianTire }
+    ]" :key="shop.name">
+            <a :href="shop.href" target="_blank" rel="noopener noreferrer"
+              class="block bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden group">
+              <div class="relative overflow-hidden">
+                <img :src="shop.img" :alt="shop.alt"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2" x-text="shop.name">
+                </h3>
+                <p class="text-gray-600 text-sm" x-text="shop.desc"></p>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            x-text="translations[language].howItWorks.title">
+            How It Works
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto" x-text="translations[language].howItWorks.subtitle">
+            Your international shopping made simple in 5 easy steps
+          </p>
+        </div>
+
+        <div class="space-y-16">
+          <!-- Step 1 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="lg:w-1/2">
+              <div class="flex items-center mb-4">
+                <div class="bg-polar-blue rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <span class="text-xl font-bold text-white">1</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900" x-text="translations[language].howItWorks.step1.title">
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step1.desc">
+       
+              </p>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="./assets/images/steps/step1.avif" alt="Create Account" class="w-full rounded-lg shadow-lg">
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col lg:flex-row-reverse items-center gap-8">
+            <div class="lg:w-1/2">
+              <div class="flex items-center mb-4">
+                <div class="bg-polar-blue rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <span class="text-xl font-bold text-white">2</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900" x-text="translations[language].howItWorks.step2.title">
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step2.desc">
+       
+              </p>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="./assets/images/steps/step2.avif" alt="Personal Addresses" class="w-full rounded-lg shadow-lg">
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="lg:w-1/2">
+              <div class="flex items-center mb-4">
+                <div class="bg-polar-blue rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <span class="text-xl font-bold text-white">3</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900" x-text="translations[language].howItWorks.step3.title">
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step3.desc">
+
+              </p>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="./assets/images/steps/step3.avif" alt="Shop Worldwide" class="w-full rounded-lg shadow-lg">
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex flex-col lg:flex-row-reverse items-center gap-8">
+            <div class="lg:w-1/2">
+              <div class="flex items-center mb-4">
+                <div class="bg-polar-blue rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <span class="text-xl font-bold text-white">4</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900" x-text="translations[language].howItWorks.step4.title">
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step4.desc">
+ 
+              </p>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="./assets/images/steps/step4.avif" alt="Process Parcels" class="w-full rounded-lg shadow-lg">
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="lg:w-1/2">
+              <div class="flex items-center mb-4">
+                <div class="bg-polar-blue rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <span class="text-xl font-bold text-white">5</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900" x-text="translations[language].howItWorks.step5.title">
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step5.desc">
+      
+              </p>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="./assets/images/steps/step5.avif" alt="Delivery to Uzbekistan"
+                class="w-full rounded-lg shadow-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            x-text="translations[language].products.title">
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto" x-text="translations[language].products.subtitle">
+          </p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <!-- Product Card Template -->
+          <template x-for="(item, key) in translations[language].products.items" :key="key">
+            <div
+              class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group">
+              <!-- Product Image and Tag -->
+              <div class="relative overflow-hidden">
+                <img :src="'./assets/images/goods/' + item.image" :alt="item.title"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                <div class="absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-bold text-white"
+                  :class="item.tagColor" x-text="item.tag">
+                </div>
+              </div>
+
+              <!-- Product Info -->
+              <div class="p-6">
+                <h3 class="text-lg font-bold text-gray-900 mb-2" x-text="item.title">
+                </h3>
+                <p class="text-gray-600 text-sm mb-3" x-text="item.desc"></p>
+                <div class="flex items-center justify-between">
+                  <span class="text-polar-blue font-bold" x-text="item.price"></span>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-polar-blue">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+          x-text="translations[language].ctaSection.title">
+        </h2>
+        <p class="text-lg text-white mb-8 max-w-2xl mx-auto" x-text="translations[language].ctaSection.subtitle">
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://en.polexp.com/register" target="_blank" rel="noopener">
+            <button
+              class="cursor-pointer bg-white hover:bg-gray-100 text-polar-blue font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+              x-text="translations[language].ctaSection.buttonPrimary">
+            </button>
+          </a>
+          <a href="https://en.polexp.com/about.html" target="_blank" rel="noopener">
+            <button
+              class="cursor-pointer border-2 border-white text-white hover:bg-white hover:text-polar-blue font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
+              x-text="translations[language].ctaSection.buttonSecondary">
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <a href="https://en.polexp.com/" target="_blank" rel="noopener noreferrer" class="flex items-center mb-4">
+            <img class="h-10 w-auto" src="./assets/logo/logo.avif" alt="">
+            <span class="ml-3 text-xl font-bold">Polar Express</span>
+          </a>
+
+          <p class="text-gray-400 mb-4" x-text="translations[language].footer.tagline">
+          </p>
+
+          <div class="flex space-x-4">
+            <a href="https://en.polexp.com/" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors duration-200 p-1">
+              <span class="sr-only">Website</span>
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M3.51211712,15 L8.17190229,15 C8.05949197,14.0523506 8,13.0444554 8,12 C8,10.9555446 8.05949197,9.94764942 8.17190229,9 L3.51211712,9 C3.18046266,9.93833678 3,10.9480937 3,12 C3,13.0519063 3.18046266,14.0616632 3.51211712,15 L3.51211712,15 Z M3.93551965,16 C5.12590433,18.3953444 7.35207678,20.1851177 10.0280093,20.783292 C9.24889451,19.7227751 8.65216136,18.0371362 8.31375067,16 L3.93551965,16 L3.93551965,16 Z M20.4878829,15 C20.8195373,14.0616632 21,13.0519063 21,12 C21,10.9480937 20.8195373,9.93833678 20.4878829,9 L15.8280977,9 C15.940508,9.94764942 16,10.9555446 16,12 C16,13.0444554 15.940508,14.0523506 15.8280977,15 L20.4878829,15 L20.4878829,15 Z M20.0644804,16 L15.6862493,16 C15.3478386,18.0371362 14.7511055,19.7227751 13.9719907,20.783292 C16.6479232,20.1851177 18.8740957,18.3953444 20.0644804,16 L20.0644804,16 Z M9.18440269,15 L14.8155973,15 C14.9340177,14.0623882 15,13.0528256 15,12 C15,10.9471744 14.9340177,9.93761183 14.8155973,9 L9.18440269,9 C9.06598229,9.93761183 9,10.9471744 9,12 C9,13.0528256 9.06598229,14.0623882 9.18440269,15 L9.18440269,15 Z M9.3349823,16 C9.85717082,18.9678295 10.9180729,21 12,21 C13.0819271,21 14.1428292,18.9678295 14.6650177,16 L9.3349823,16 L9.3349823,16 Z M3.93551965,8 L8.31375067,8 C8.65216136,5.96286383 9.24889451,4.27722486 10.0280093,3.21670804 C7.35207678,3.81488234 5.12590433,5.60465556 3.93551965,8 L3.93551965,8 Z M20.0644804,8 C18.8740957,5.60465556 16.6479232,3.81488234 13.9719907,3.21670804 C14.7511055,4.27722486 15.3478386,5.96286383 15.6862493,8 L20.0644804,8 L20.0644804,8 Z M9.3349823,8 L14.6650177,8 C14.1428292,5.03217048 13.0819271,3 12,3 C10.9180729,3 9.85717082,5.03217048 9.3349823,8 L9.3349823,8 Z M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/polexp" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors duration-200 p-1">
+              <span class="sr-only">Facebook</span>
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.9,2H3.1A1.1,1.1,0,0,0,2,3.1V20.9A1.1,1.1,0,0,0,3.1,22h9.58V14.25h-2.6v-3h2.6V9a3.64,3.64,0,0,1,3.88-4,20.26,20.26,0,0,1,2.33.12v2.7H17.3c-1.26,0-1.5.6-1.5,1.47v1.93h3l-.39,3H15.8V22h5.1A1.1,1.1,0,0,0,22,20.9V3.1A1.1,1.1,0,0,0,20.9,2Z" />
+              </svg>
+            </a>
+            <a href="https://t.me/+IA6JcOQugzAyMzk6" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors duration-200 p-1">
+              <span class="sr-only">Telegram</span>
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-4" x-text="translations[language].footer.quickLinks">
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#home" class="text-gray-400 hover:text-white py-2" x-text="translations[language].nav.home"></a>
+            </li>
+            <li>
+              <a href="#shops" class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].nav.shops"></a>
+            </li>
+            <li>
+              <a href="#how-it-works" class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].nav.howItWorks"></a>
+            </li>
+            <li>
+              <a href="#products" class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].nav.products"></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="text-lg font-bold mb-4" x-text="translations[language].footer.services">
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="https://en.polexp.com/shipping.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.servicesList.forwarding"></a>
+            </li>
+            <li>
+              <a href="https://en.polexp.com/delivery.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.servicesList.consolidation"></a>
+            </li>
+            <li>
+              <a href="https://en.polexp.com/address.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.servicesList.shopping"></a>
+            </li>
+            <li>
+              <a href="https://polexp.com/order-help.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.servicesList.customs"></a>
+            </li>
+            <li>
+              <a href="https://en.polexp.com/insurance.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.servicesList.express"></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Website Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-4" x-text="translations[language].footer.services">
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="https://en.polexp.com/contacts.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.websiteLinks.contacts"></a>
+            </li>
+            <li>
+              <a href="https://en.polexp.com/calc.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.websiteLinks.calculator"></a>
+            </li>
+            <li>
+              <a href="https://en.polexp.com/dashboard.html" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.websiteLinks.dashboard"></a>
+            </li>
+            <li>
+              <a href="https://en.polexp.com/login" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-white py-2"
+                x-text="translations[language].footer.websiteLinks.login"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>
+          <span x-text="translations[language].footer.rights"></span> |
+          <a href="https://en.polexp.com/user-agreement.html" target="_blank" rel="noopener noreferrer"
+            class="hover:text-white" x-text="translations[language].footer.userAgreement"></a> |
+          <a href="https://polexp.com/policy.html" target="_blank" rel="noopener noreferrer" class="hover:text-white"
+            x-text="translations[language].footer.privacy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- Smooth Scrolling -->
+  <script>
+function animateCounter(e){const t=+e.getAttribute("data-target"),a=Math.round(2e3/(1e3/30));let o=0;const s=e.textContent.trim().endsWith("+"),r=setInterval((()=>{o++;const n=o/a,i=Math.round(t*n);let l=t>1e3?i.toLocaleString():i;if(s&&(l+="+"),e.textContent=l,o===a){clearInterval(r);let a=t>1e3?t.toLocaleString():t;s&&(a+="+"),e.textContent=a}}),1e3/30)}document.querySelectorAll('a[href^="#"]').forEach((e=>{e.addEventListener("click",(function(e){e.preventDefault();const t=document.querySelector(this.getAttribute("href"));t&&t.scrollIntoView({behavior:"smooth",block:"start"})}))}));const counters=document.querySelectorAll(".counter"),observer=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting&&(animateCounter(e.target),observer.unobserve(e.target))}))}),{threshold:.5});counters.forEach((e=>observer.observe(e))),window.appData={mobileMenuOpen:!1,language:"en",activeShopRegion:"us",translations:{en:{title:"Shop Worldwide — Receive in Dubai",subtitle:"Easily shop from U.S. and Canadian stores that don’t ship to Dubai. With your own overseas warehouse address, enjoy fast, reliable forwarding straight to your doorstep in Dubai.",cta:"Get Your Free U.S. or Canadian Shipping Address",stats:{parcels:"Parcels Delivered",countries:"Countries Served",years:"Years in Service"},howItWorks:{title:"How It Works",subtitle:"Your international shopping made simple in 5 easy steps",step1:{title:"Create Your Account",desc:"Register on our website in just a few minutes. As soon as you sign up, you’ll receive your own dedicated U.S. and Canadian warehouse addresses. No long forms, no hidden fees — just instant access to start shopping abroad."},step2:{title:"Shop U.S. & Canadian Stores",desc:"Browse American and Canadian retailers for products not available in Dubai — fashion, electronics, supplements, lifestyle goods, and more. At checkout, simply enter your personal U.S. or Canadian address, and shop like a local."},step3:{title:"We Receive Your Packages",desc:"Your orders arrive at our secure warehouses in the U.S. or Canada. Every parcel is checked, logged into your account, and safely stored until you’re ready to ship. You’ll get updates and photos, so you always know what’s waiting."},step4:{title:"Parcel Management Made Easy",desc:"Combine multiple purchases into a single shipment to save on international delivery costs. Request extra protective packaging, labeling, or special handling for fragile items. Our flexible services give you full control over your packages."},step5:{title:"Fast Delivery to Dubai",desc:"Once you’re ready, we forward your parcels directly to your home or office in Dubai. With reliable shipping partners, full tracking, customs clearance support, and competitive rates, your purchases arrive quickly and securely."}},products:{title:"Available Goods from the USA and Canada",subtitle:"Shop electronics, fashion, home goods, and more from top international brands",items:{phones:{title:"Phones",desc:"Latest smartphones and accessories",price:"From $199",tag:"Popular",tagColor:"bg-polar-blue",image:"Iphone.avif"},handbags:{title:"Handbags",desc:"Luxury bags and accessories",price:"From $80",tag:"Premium",tagColor:"bg-pink-600",image:"Handbag.avif"},glasses:{title:"Glasses",desc:"Sunglasses and eyewear from top brands",price:"From $30",tag:"New",tagColor:"bg-yellow-400 text-gray-800",image:"Glasses.avif"},tools:{title:"Tools",desc:"Power tools and DIY essentials",price:"From $40",tag:"Trending",tagColor:"bg-green-600",image:"power-tool.avif"},computers:{title:"Computers",desc:"Laptops, desktops, and parts",price:"From $300",tag:"Hot",tagColor:"bg-polar-blue",image:"Computer.avif"},makeup:{title:"Makeup",desc:"Cosmetics and beauty products",price:"From $15",tag:"Beauty",tagColor:"bg-pink-500",image:"Makeup.avif"},cameras:{title:"Cameras",desc:"Photography gear and accessories",price:"From $100",tag:"Best",tagColor:"bg-yellow-500",image:"Camera.avif"},sports:{title:"Sports",desc:"Sports gear and equipment",price:"From $20",tag:"Active",tagColor:"bg-green-500",image:"Sports.avif"}}},nav:{home:"Home",shops:"Shops",howItWorks:"How It Works",products:"Products",contact:"Contact"},footer:{tagline:"Your trusted partner for international shipping from the USA and Canada to Dubai.",quickLinks:"Quick Links",services:"Services",contactInfo:"Contact Info",rights:"© ПЭ 2025. All rights reserved.",privacy:"Data Privacy",userAgreement:"User Agreement",servicesList:{forwarding:"Sending parcels",consolidation:"Parcel delivery",shopping:"Virtual addresses",customs:"Help with purchasing",express:"Parcel insurance"},websiteLinks:{contacts:"Contacts",calculator:"Calculator",dashboard:"Dashboard",login:"Login"}},ctaSection:{title:"Ready to Start Shopping Globally?",subtitle:"Join thousands of customers who trust Polar Express for their international shopping needs. Get your free virtual addresses today and start shopping from the USA and Canada.",buttonPrimary:"Get Free Virtual Address",buttonSecondary:"Learn More About Us"},shops:{title:"Shop from Top Retailers",subtitle:"Access thousands of brands from the USA and Canada",uae:"UAE Shops",us:"US Shops",canada:"Canada Shops",list:{amazonUS:"World's largest online marketplace",nike:"Athletic footwear and apparel",bestbuy:"Electronics and technology",macys:"Store for fashion and home",walmart:"Everyday low prices on everything",target:"Trendy fashion and essentials",kohls:"Apparel, shoes, and home goods",staples:"Office supplies and technology",aritzia:"Women’s fashion and lifestyle brand",memoryexpress:"Computers, parts, and electronics",mec:"Outdoor gear and equipment",roots:"Casual wear and leather goods",sportchek:"Sports equipment and activewear",timhortons:"Coffee, donuts, and fast food",well:"Health and wellness essentials online",canadianTire:"Automotive, sports, and home goods"}}}}};
+  </script>
+</body>
+
+</html>

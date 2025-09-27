@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-polar-blue: #2563eb;
+  --color-polar-navy: #1e40af;
+  --color-polar-gray: #64748b;
+  --color-polar-light: #f1f5f9;
+
+  --font-museo: "MuseoSans", sans-serif;
+}
