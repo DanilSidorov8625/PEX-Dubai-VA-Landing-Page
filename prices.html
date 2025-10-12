@@ -10,11 +10,9 @@
 
   <link href="./assets/css/style.css" rel="stylesheet">
 
-
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <style>
-
     @font-face {
       font-family: "MuseoSans";
       src: url("./assets/fonts/MuseoSansRegular.woff") format("woff");
@@ -30,9 +28,19 @@
     }
 
     body {
-      font-family:
-        "MuseoSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        sans-serif;
+      font-family: "MuseoSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .pricing-gradient {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+
+    .card-glow {
+      box-shadow: 0 10px 40px -10px rgba(37, 99, 235, 0.3);
+    }
+
+    .popular-badge {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     }
   </style>
 </head>
@@ -87,233 +95,323 @@
     </div>
   </nav>
 
-  <main class="min-h-screen py-20">
-    <!-- Pricing & Delivery Times Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          Shipping Rates & Delivery Times
-        </h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Choose the shipping option that best fits your needs. All rates are calculated per kilogram.
-        </p>
-      </div>
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="pricing-gradient py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            Simple, Transparent Pricing
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Choose the perfect shipping option for your needs. All rates calculated per kilogram with no hidden fees.
+          </p>
+        </div>
 
-      <!-- Desktop Table View -->
-      <div class="hidden md:block bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-        <table class="w-full">
-          <thead class="bg-polar-blue text-white">
-            <tr>
-              <th class="px-6 py-4 text-left text-lg font-bold">Service Type</th>
-              <th class="px-6 py-4 text-left text-lg font-bold">Estimated Delivery Time</th>
-              <th class="px-6 py-4 text-left text-lg font-bold">Starting Price (per kg)</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200">
-            <!-- Economy Row -->
-            <tr class="hover:bg-gray-50 transition-colors duration-200">
-              <td class="px-6 py-6">
-                <div class="flex items-center">
-                  <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="text-xl font-bold text-gray-900">Economy</div>
-                    <div class="text-sm text-gray-600">Budget-friendly option</div>
-                  </div>
+        <!-- Pricing Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Economy Tier -->
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-6">
+                <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                  </svg>
                 </div>
-              </td>
-              <td class="px-6 py-6">
-                <div class="text-lg font-semibold text-gray-900">7–14 Business Days</div>
-                <div class="text-sm text-gray-600">Standard processing time</div>
-              </td>
-              <td class="px-6 py-6">
-                <div class="text-2xl font-bold text-polar-blue">From $4.99/kg</div>
-                <div class="text-sm text-gray-600">Plus applicable fees</div>
-              </td>
-            </tr>
+              </div>
 
-            <!-- Standard Row -->
-            <tr class="hover:bg-gray-50 transition-colors duration-200">
-              <td class="px-6 py-6">
-                <div class="flex items-center">
-                  <div class="bg-polar-blue/10 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                    <svg class="w-6 h-6 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="text-xl font-bold text-gray-900">Standard</div>
-                    <div class="text-sm text-gray-600">Most popular choice</div>
-                  </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Economy</h3>
+              <p class="text-gray-600 mb-6">Perfect for non-urgent shipments</p>
+
+              <div class="mb-6">
+                <div class="flex items-baseline">
+                  <span class="text-5xl font-bold text-gray-900">$4.99</span>
+                  <span class="text-gray-600 ml-2">/kg</span>
                 </div>
-              </td>
-              <td class="px-6 py-6">
-                <div class="text-lg font-semibold text-gray-900">5–10 Business Days</div>
-                <div class="text-sm text-gray-600">Faster processing</div>
-              </td>
-              <td class="px-6 py-6">
-                <div class="text-2xl font-bold text-polar-blue">From $6.99/kg</div>
-                <div class="text-sm text-gray-600">Plus applicable fees</div>
-              </td>
-            </tr>
+                <p class="text-sm text-gray-500 mt-2">Starting price</p>
+              </div>
 
-            <!-- Express Row -->
-            <tr class="hover:bg-gray-50 transition-colors duration-200">
-              <td class="px-6 py-6">
-                <div class="flex items-center">
-                  <div class="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                    <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="text-xl font-bold text-gray-900">Express</div>
-                    <div class="text-sm text-gray-600">Fastest delivery available</div>
-                  </div>
+              <div class="border-t border-gray-200 pt-6 mb-6">
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span class="font-semibold">7-14 business days</span>
                 </div>
-              </td>
-              <td class="px-6 py-6">
-                <div class="text-lg font-semibold text-gray-900">3–5 Business Days</div>
-                <div class="text-sm text-gray-600">Priority processing</div>
-              </td>
-              <td class="px-6 py-6">
-                <div class="text-2xl font-bold text-polar-blue">From $8.99/kg</div>
-                <div class="text-sm text-gray-600">Plus applicable fees</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Standard processing</span>
+                </div>
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Full tracking included</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Best value option</span>
+                </div>
+              </div>
 
-      <!-- Mobile Card View -->
-      <div class="md:hidden space-y-6 mb-8">
-        <!-- Economy Card -->
-        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-          <div class="flex items-center mb-4">
-            <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-gray-900">Economy</div>
-              <div class="text-sm text-gray-600">Budget-friendly option</div>
+              <a href="https://en.polexp.com/register" target="_blank" rel="noopener">
+                <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 cursor-pointer">
+                  Choose Economy
+                </button>
+              </a>
             </div>
           </div>
-          <div class="space-y-3 border-t pt-4">
-            <div>
-              <div class="text-sm text-gray-600 mb-1">Delivery Time</div>
-              <div class="text-lg font-semibold text-gray-900">7–14 Business Days</div>
+
+          <!-- Standard Tier (Featured) -->
+          <div class="bg-white rounded-2xl shadow-xl card-glow overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border-2 border-polar-blue relative">
+            <div class="popular-badge text-white text-center py-2 px-4">
+              <span class="text-sm font-bold">⭐ MOST POPULAR</span>
             </div>
-            <div>
-              <div class="text-sm text-gray-600 mb-1">Starting Price</div>
-              <div class="text-2xl font-bold text-polar-blue">From $4.99/kg</div>
+
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-6">
+                <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Standard</h3>
+              <p class="text-gray-600 mb-6">Our most popular choice</p>
+
+              <div class="mb-6">
+                <div class="flex items-baseline">
+                  <span class="text-5xl font-bold text-polar-blue">$6.99</span>
+                  <span class="text-gray-600 ml-2">/kg</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Starting price</p>
+              </div>
+
+              <div class="border-t border-gray-200 pt-6 mb-6">
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-polar-blue mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span class="font-semibold">5-10 business days</span>
+                </div>
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-polar-blue mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Faster processing</span>
+                </div>
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-polar-blue mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Priority handling</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-polar-blue mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Best balance speed/cost</span>
+                </div>
+              </div>
+
+              <a href="https://en.polexp.com/register" target="_blank" rel="noopener">
+                <button class="w-full bg-polar-blue hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 cursor-pointer shadow-lg">
+                  Choose Standard
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Express Tier -->
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-6">
+                <div class="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Express</h3>
+              <p class="text-gray-600 mb-6">For time-sensitive deliveries</p>
+
+              <div class="mb-6">
+                <div class="flex items-baseline">
+                  <span class="text-5xl font-bold text-gray-900">$8.99</span>
+                  <span class="text-gray-600 ml-2">/kg</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Starting price</p>
+              </div>
+
+              <div class="border-t border-gray-200 pt-6 mb-6">
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span class="font-semibold">3-5 business days</span>
+                </div>
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Express processing</span>
+                </div>
+                <div class="flex items-center text-gray-700 mb-3">
+                  <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Priority customs clearance</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Fastest delivery option</span>
+                </div>
+              </div>
+
+              <a href="https://en.polexp.com/register" target="_blank" rel="noopener">
+                <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 cursor-pointer">
+                  Choose Express
+                </button>
+              </a>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Standard Card -->
-        <div class="bg-white rounded-xl shadow-lg p-6 border-2 border-polar-blue hover:shadow-xl transition-all duration-300 relative">
-          <div class="flex items-center mb-4">
-            <div class="bg-polar-blue/10 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <svg class="w-6 h-6 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">What's Included in Every Shipment</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-polar-blue/5 transition-colors duration-300">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
               </svg>
             </div>
-            <div>
-              <div class="text-xl font-bold text-gray-900">Standard</div>
-              <div class="text-sm text-gray-600">Most popular choice</div>
-            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Secure Packaging</h3>
+            <p class="text-sm text-gray-600">Professional handling and repackaging for maximum protection</p>
           </div>
-          <div class="absolute top-4 right-4 bg-polar-blue text-white text-xs font-bold px-3 py-1 rounded-full">
-            POPULAR
+
+          <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-polar-blue/5 transition-colors duration-300">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Real-Time Tracking</h3>
+            <p class="text-sm text-gray-600">Track your shipment from warehouse to doorstep</p>
           </div>
-          <div class="space-y-3 border-t pt-4">
-            <div>
-              <div class="text-sm text-gray-600 mb-1">Delivery Time</div>
-              <div class="text-lg font-semibold text-gray-900">5–10 Business Days</div>
+
+          <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-polar-blue/5 transition-colors duration-300">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+              </svg>
             </div>
-            <div>
-              <div class="text-sm text-gray-600 mb-1">Starting Price</div>
-              <div class="text-2xl font-bold text-polar-blue">From $6.99/kg</div>
+            <h3 class="font-bold text-gray-900 mb-2">Consolidation</h3>
+            <p class="text-sm text-gray-600">Combine multiple packages to save on shipping costs</p>
+          </div>
+
+          <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-polar-blue/5 transition-colors duration-300">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
             </div>
+            <h3 class="font-bold text-gray-900 mb-2">Customs Support</h3>
+            <p class="text-sm text-gray-600">We handle customs documentation and clearance</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Express Card -->
-        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-          <div class="flex items-center mb-4">
-            <div class="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    <!-- Important Info -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-polar-blue">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <svg class="w-6 h-6 text-polar-blue mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Important Pricing Information
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-polar-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Actual Weight Pricing</p>
+                <p class="text-sm text-gray-600">Final cost calculated based on verified package weight</p>
+              </div>
             </div>
-            <div>
-              <div class="text-xl font-bold text-gray-900">Express</div>
-              <div class="text-sm text-gray-600">Fastest delivery available</div>
+
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-polar-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Additional Fees</p>
+                <p class="text-sm text-gray-600">Customs duties and special handling may apply</p>
+              </div>
             </div>
-          </div>
-          <div class="space-y-3 border-t pt-4">
-            <div>
-              <div class="text-sm text-gray-600 mb-1">Delivery Time</div>
-              <div class="text-lg font-semibold text-gray-900">3–5 Business Days</div>
+
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-polar-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Delivery Estimates</p>
+                <p class="text-sm text-gray-600">Times may vary based on customs and destination</p>
+              </div>
             </div>
-            <div>
-              <div class="text-sm text-gray-600 mb-1">Starting Price</div>
-              <div class="text-2xl font-bold text-polar-blue">From $8.99/kg</div>
+
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-polar-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Save with Consolidation</p>
+                <p class="text-sm text-gray-600">Combine packages to reduce per-kilogram costs</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Additional Information -->
-      <div class="mt-12 bg-polar-blue/10 rounded-xl p-8 shadow-md">
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Important Information</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-polar-blue mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span>Prices are calculated based on actual package weight</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-polar-blue mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span>Additional fees may apply for customs, duties, and special handling</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-polar-blue mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span>Delivery times are estimates and may vary based on customs clearance</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-polar-blue mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span>Consolidation services available to reduce shipping costs</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- CTA Section -->
-      <div class="mt-16 text-center bg-white rounded-xl shadow-lg p-8">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
-        <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-          Join thousands of customers who trust Polar Express for their international shipping needs
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-polar-blue to-blue-700 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold mb-6">Ready to Start Shipping?</h2>
+        <p class="text-xl mb-8 text-white/90 leading-relaxed">
+          Join thousands of satisfied customers who trust Polar Express for reliable international shipping from USA and Canada to UAE
         </p>
-        <a href="https://en.polexp.com/register" target="_blank" rel="noopener">
-          <button class="bg-polar-blue hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer">
-            Get Started with Your Free Address
-          </button>
-        </a>
-        <p class="mt-6 text-gray-600">
-          Need help? <a href="https://en.polexp.com/contacts.html" target="_blank" rel="noopener" class="text-polar-blue hover:underline font-medium">Contact our support team</a>
-        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://en.polexp.com/register" target="_blank" rel="noopener">
+            <button class="bg-white hover:bg-gray-100 text-polar-blue font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl cursor-pointer">
+              Get Your Free Address
+            </button>
+          </a>
+          <a href="https://en.polexp.com/contacts.html" target="_blank" rel="noopener">
+            <button class="border-2 border-white hover:bg-white hover:text-polar-blue text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 cursor-pointer">
+              Contact Support
+            </button>
+          </a>
+        </div>
       </div>
     </section>
   </main>
