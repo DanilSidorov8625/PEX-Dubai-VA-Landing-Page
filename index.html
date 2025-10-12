@@ -96,7 +96,7 @@
 
           <div class="flex items-center space-x-2 px-3 py-2">
             <a href="https://en.polexp.com/" target="_blank" rel="noopener noreferrer"
-              class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 bg-polar-blue text-white">
+              class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 bg-polar-blue text-white hover:bg-blue-700">
               PEX Home
             </a>
           </div>
@@ -127,11 +127,11 @@
         x-transition:leave-start="opacity-100 transform translate-y-0"
         x-transition:leave-end="opacity-0 transform -translate-y-2" class="lg:hidden border-t border-gray-200 bg-white">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="#home" class="block px-3 py-2" x-text="translations[language].nav.home"></a>
-          <a href="#shops" class="block px-3 py-2" x-text="translations[language].nav.shops"></a>
-          <a href="#how-it-works" class="block px-3 py-2" x-text="translations[language].nav.howItWorks"></a>
-          <a href="#products" class="block px-3 py-2" x-text="translations[language].nav.products"></a>
-          <a href="prices.html" class="block px-3 py-2">Prices</a>
+          <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.home"></a>
+          <a href="#shops" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.shops"></a>
+          <a href="#how-it-works" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.howItWorks"></a>
+          <a href="#products" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.products"></a>
+          <a href="prices.html" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200">Prices</a>
         </div>
       </div>
     </div>
@@ -174,7 +174,7 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="sr-only">Our Statistics</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -226,6 +226,177 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- What Is Shop & Ship Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-8">
+          <!-- Left: Text Content -->
+          <div class="lg:w-1/2 space-y-4">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              What Is Shop & Ship?
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Shop & Ship (also known as parcel forwarding) lets you buy from U.S. and Canadian stores that don't ship to the UAE.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Polar Express gives you a personal U.S. and Canadian address. We receive your purchases, prepare them securely, and forward them straight to your door anywhere in the Emirates.
+            </p>
+          </div>
+
+          <!-- Right: Illustration -->
+          <div class="lg:w-1/2">
+            <img src="/assets/images/hero/shop_ship.png"
+                    class="max-w-full object-cover group-hover:scale-110 transition-transform duration-300 rounded-md">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Polar Express Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Why Choose Polar Express
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover the benefits of shopping internationally with Polar Express
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1: Access Global Stores -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Access Global Stores</h3>
+            <p class="text-gray-600">Shop from thousands of U.S. and Canadian retailers, even those that don't ship to the UAE.</p>
+          </div>
+
+          <!-- Feature 2: Affordable Rates -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Affordable Rates</h3>
+            <p class="text-gray-600">Save money with consolidation and discounted EMX shipping.</p>
+          </div>
+
+          <!-- Feature 3: Fast Delivery -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Fast Delivery to All Emirates</h3>
+            <p class="text-gray-600">Receive packages in 3–10 business days through Emirates Post Group.</p>
+          </div>
+
+          <!-- Feature 4: Secure Handling -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Secure Handling & Insurance</h3>
+            <p class="text-gray-600">Every parcel is processed in a secure facility with optional full-value coverage.</p>
+          </div>
+
+          <!-- Feature 5: Official EMX Partnership -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-polar-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-polar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Official EMX Partnership</h3>
+            <p class="text-gray-600">Seamless customs clearance and reliable last-mile delivery to your doorstep.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Coverage Section -->
+    <section class="py-20 bg-polar-blue text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            We Deliver to All 7 Emirates
+          </h2>
+          <p class="text-lg text-white/90 max-w-2xl mx-auto">
+            Comprehensive delivery coverage across all Emirates with reliable service
+          </p>
+        </div>
+
+        <!-- Emirates List -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <div class="bg-white/10 rounded-lg px-6 py-3 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+            <span class="text-lg font-medium">Abu Dhabi</span>
+          </div>
+          <div class="bg-white/10 rounded-lg px-6 py-3 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+            <span class="text-lg font-medium">Dubai</span>
+          </div>
+          <div class="bg-white/10 rounded-lg px-6 py-3 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+            <span class="text-lg font-medium">Sharjah</span>
+          </div>
+          <div class="bg-white/10 rounded-lg px-6 py-3 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+            <span class="text-lg font-medium">Ajman</span>
+          </div>
+          <div class="bg-white/10 rounded-lg px-6 py-3 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+            <span class="text-lg font-medium">Umm Al-Quwain</span>
+          </div>
+          <div class="bg-white/10 rounded-lg px-6 py-3 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+            <span class="text-lg font-medium">Ras Al Khaimah</span>
+          </div>
+          <div class="bg-white/10 rounded-lg px-6 py-3 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+            <span class="text-lg font-medium">Fujairah</span>
+          </div>
+        </div>
+
+        <!-- UAE Map Placeholder -->
+        <div class="max-w-3xl mx-auto bg-white/10 rounded-xl p-8 backdrop-blur-sm shadow-xl">
+          <svg viewBox="0 0 600 300" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+            <!-- Simplified UAE Map Outline -->
+            <path d="M 50 150 L 100 100 L 200 80 L 300 100 L 400 120 L 500 100 L 550 150 L 500 200 L 400 220 L 300 200 L 200 220 L 100 200 Z"
+                  fill="none" stroke="white" stroke-width="3" opacity="0.5"/>
+
+            <!-- Location Markers for Emirates -->
+            <circle cx="150" cy="150" r="6" fill="white"/>
+            <text x="150" y="140" text-anchor="middle" fill="white" class="text-xs">Abu Dhabi</text>
+
+            <circle cx="250" cy="120" r="6" fill="white"/>
+            <text x="250" y="110" text-anchor="middle" fill="white" class="text-xs">Dubai</text>
+
+            <circle cx="300" cy="130" r="6" fill="white"/>
+            <text x="300" y="120" text-anchor="middle" fill="white" class="text-xs">Sharjah</text>
+
+            <circle cx="330" cy="140" r="6" fill="white"/>
+            <text x="330" y="130" text-anchor="middle" fill="white" class="text-xs">Ajman</text>
+
+            <circle cx="360" cy="150" r="6" fill="white"/>
+            <text x="360" y="170" text-anchor="middle" fill="white" class="text-xs">UAQ</text>
+
+            <circle cx="420" cy="130" r="6" fill="white"/>
+            <text x="420" y="120" text-anchor="middle" fill="white" class="text-xs">RAK</text>
+
+            <circle cx="500" cy="160" r="6" fill="white"/>
+            <text x="500" y="180" text-anchor="middle" fill="white" class="text-xs">Fujairah</text>
+          </svg>
+        </div>
+
+        <p class="text-lg mt-12 text-white/90 max-w-3xl mx-auto text-center">
+          Enjoy complete coverage across the UAE with express clearance and reliable final-mile delivery via Emirates Post Group.
+        </p>
       </div>
     </section>
 
