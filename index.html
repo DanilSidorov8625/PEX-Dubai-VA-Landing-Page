@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     Polar Express - Shop in the U.S. and Canada — Ship Direct to
-    UAE
+    GCC
   </title>
   <meta name="description"
-    content="Shop from top retailers in the USA, and Canada with Polar Express. Get your personal virtual addresses and ship directly to UAE with fast, affordable delivery.">
+    content="Shop from top retailers in the USA, and Canada with Polar Express. Get your personal virtual addresses and ship directly to GCC with fast, affordable delivery.">
   <link rel="icon" type="image/x-icon" href="./assets/logo/favicon.ico">
 
   <!-- CSS -->
@@ -19,12 +19,14 @@
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <!-- Swiper CSS -->
-  <link rel="preload" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css"></noscript>
+  <link rel="preload" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css">
+  </noscript>
 
   <!-- Custom Fonts -->
   <style>
-    
     @font-face {
       font-family: "MuseoSans";
       src: url("./assets/fonts/MuseoSansRegular.woff") format("woff");
@@ -76,7 +78,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 lg:h-20">
         <!-- Logo -->
-        <a href="https://en.polexp.com/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 flex items-center">
+        <a href="https://en.polexp.com/" target="_blank" rel="noopener noreferrer"
+          class="flex-shrink-0 flex items-center">
           <img class="h-10 w-auto lg:h-12" src="./assets/logo/logo.avif" alt="">
           <span class="ml-3 text-xl lg:text-2xl font-bold text-polar-blue">Polar Express</span>
         </a>
@@ -126,11 +129,20 @@
         x-transition:leave-start="opacity-100 transform translate-y-0"
         x-transition:leave-end="opacity-0 transform -translate-y-2" class="lg:hidden border-t border-gray-200 bg-white">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.home"></a>
-          <a href="#shops" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.shops"></a>
-          <a href="#how-it-works" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.howItWorks"></a>
-          <a href="#products" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200" x-text="translations[language].nav.products"></a>
-          <a href="prices.html" class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200">Prices</a>
+          <a href="#home"
+            class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200"
+            x-text="translations[language].nav.home"></a>
+          <a href="#shops"
+            class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200"
+            x-text="translations[language].nav.shops"></a>
+          <a href="#how-it-works"
+            class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200"
+            x-text="translations[language].nav.howItWorks"></a>
+          <a href="#products"
+            class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200"
+            x-text="translations[language].nav.products"></a>
+          <a href="prices.html"
+            class="block px-3 py-2 text-gray-700 hover:text-polar-blue hover:bg-gray-50 rounded-md transition-colors duration-200">Prices</a>
         </div>
       </div>
     </div>
@@ -141,10 +153,9 @@
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Background Image -->
       <div class="absolute inset-0 z-0">
-        <img src="./assets/images/hero/DubaiHero.avif" alt="International Shipping"
-          class="w-full h-full object-cover">
+        <img src="./assets/images/hero/DubaiHero.avif" alt="International Shipping" class="w-full h-full object-cover">
         <!-- gradient-overlay shipping-pattern -->
-        <div class="absolute inset-0"></div>
+          <div class="absolute inset-0 bg-black/10"></div> <!-- overlay -->
       </div>
 
       <!-- Content -->
@@ -238,17 +249,19 @@
               What Is Shop & Ship?
             </h2>
             <p class="text-lg text-gray-600 leading-relaxed">
-              Shop & Ship (also known as parcel forwarding) lets you buy from U.S. and Canadian stores that don't ship to the UAE.
+              Shop & Ship (also known as parcel forwarding) lets you buy from U.S. and Canadian stores that don't ship
+              to the GCC.
             </p>
             <p class="text-lg text-gray-600 leading-relaxed">
-              Polar Express gives you a personal U.S. and Canadian address. We receive your purchases, prepare them securely, and forward them straight to your door anywhere in the Emirates.
+              Polar Express gives you a personal U.S. and Canadian address. We receive your purchases, prepare them
+              securely, and forward them straight to your door anywhere in the Emirates.
             </p>
           </div>
 
           <!-- Right: Illustration -->
           <div class="lg:w-1/2">
             <img src="/assets/images/hero/shop_ship.png"
-                    class="max-w-full object-cover group-hover:scale-110 transition-transform duration-300 rounded-md">
+              class="max-w-full object-cover group-hover:scale-110 transition-transform duration-300 rounded-md">
           </div>
         </div>
       </div>
@@ -273,104 +286,145 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Feature 1: Access Global Stores -->
-          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-polar-blue relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-polar-blue/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-polar-blue relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-polar-blue/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500">
+            </div>
             <div class="relative">
-              <div class="bg-gradient-to-br from-polar-blue to-blue-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div
+                class="bg-gradient-to-br from-polar-blue to-blue-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                  </path>
                 </svg>
               </div>
               <div class="flex items-center mb-3">
                 <span class="bg-polar-blue/10 text-polar-blue text-xs font-bold px-3 py-1 rounded-full mr-2">01</span>
                 <h3 class="text-xl font-bold text-gray-900">Access Global Stores</h3>
               </div>
-              <p class="text-gray-600 leading-relaxed">Shop from thousands of U.S. and Canadian retailers, even those that don't ship to the UAE. Unlock unlimited shopping possibilities.</p>
+              <p class="text-gray-600 leading-relaxed">Shop from thousands of U.S. and Canadian retailers, even those
+                that don't ship to the GCC. Unlock unlimited shopping possibilities.</p>
             </div>
           </div>
 
           <!-- Feature 2: Affordable Rates -->
-          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-green-500 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-green-500 relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500">
+            </div>
             <div class="relative">
-              <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div
+                class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                  </path>
                 </svg>
               </div>
               <div class="flex items-center mb-3">
                 <span class="bg-green-500/10 text-green-600 text-xs font-bold px-3 py-1 rounded-full mr-2">02</span>
                 <h3 class="text-xl font-bold text-gray-900">Affordable Rates</h3>
               </div>
-              <p class="text-gray-600 leading-relaxed">Save money with smart consolidation and discounted EMX shipping rates. Get more value for every dirham spent.</p>
+              <p class="text-gray-600 leading-relaxed">Save money with smart consolidation and discounted EMX shipping
+                rates. Get more value for every dirham spent.</p>
             </div>
           </div>
 
           <!-- Feature 3: Fast Delivery -->
-          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-yellow-500 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-yellow-500 relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500">
+            </div>
             <div class="relative">
-              <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div
+                class="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                  </path>
                 </svg>
               </div>
               <div class="flex items-center mb-3">
                 <span class="bg-yellow-500/10 text-yellow-600 text-xs font-bold px-3 py-1 rounded-full mr-2">03</span>
                 <h3 class="text-xl font-bold text-gray-900">Fast Delivery</h3>
               </div>
-              <p class="text-gray-600 leading-relaxed">Receive packages in 3–10 business days to all Emirates through our trusted Emirates Post Group partnership.</p>
+              <p class="text-gray-600 leading-relaxed">Receive packages in 5-10 business days to all Emirates through
+                our trusted Emirates Post Group partnership.</p>
             </div>
           </div>
 
           <!-- Feature 4: Secure Handling -->
-          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-pink-500 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-pink-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-pink-500 relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-pink-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500">
+            </div>
             <div class="relative">
-              <div class="bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div
+                class="bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                  </path>
                 </svg>
               </div>
               <div class="flex items-center mb-3">
                 <span class="bg-pink-500/10 text-pink-600 text-xs font-bold px-3 py-1 rounded-full mr-2">04</span>
                 <h3 class="text-xl font-bold text-gray-900">Secure Handling</h3>
               </div>
-              <p class="text-gray-600 leading-relaxed">Every parcel is processed in our secure facility with professional handling and optional full-value insurance coverage.</p>
+              <p class="text-gray-600 leading-relaxed">Every parcel is processed in our secure facility with
+                professional handling and optional full-value insurance coverage.</p>
             </div>
           </div>
 
           <!-- Feature 5: Official EMX Partnership -->
-          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-polar-blue relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-polar-blue/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-polar-blue relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-polar-blue/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500">
+            </div>
             <div class="relative">
-              <div class="bg-gradient-to-br from-polar-blue to-blue-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div
+                class="bg-gradient-to-br from-polar-blue to-blue-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                  </path>
                 </svg>
               </div>
               <div class="flex items-center mb-3">
                 <span class="bg-polar-blue/10 text-polar-blue text-xs font-bold px-3 py-1 rounded-full mr-2">05</span>
                 <h3 class="text-xl font-bold text-gray-900">Official Partnership</h3>
               </div>
-              <p class="text-gray-600 leading-relaxed">Seamless customs clearance and reliable last-mile delivery through our official Emirates Post Group partnership.</p>
+              <p class="text-gray-600 leading-relaxed">Seamless customs clearance and reliable last-mile delivery
+                through our official Emirates Post Group partnership.</p>
             </div>
           </div>
 
           <!-- Feature 6: 24/7 Support (New Feature to fill the grid) -->
-          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-green-500 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-t-4 border-green-500 relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500">
+            </div>
             <div class="relative">
-              <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div
+                class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                  </path>
                 </svg>
               </div>
               <div class="flex items-center mb-3">
                 <span class="bg-green-500/10 text-green-600 text-xs font-bold px-3 py-1 rounded-full mr-2">06</span>
                 <h3 class="text-xl font-bold text-gray-900">Expert Support</h3>
               </div>
-              <p class="text-gray-600 leading-relaxed">Get help whenever you need it with our dedicated customer support team ready to assist with all your shipping needs.</p>
+              <p class="text-gray-600 leading-relaxed">Get help whenever you need it with our dedicated customer support
+                team ready to assist with all your shipping needs.</p>
             </div>
           </div>
         </div>
@@ -378,7 +432,8 @@
     </section>
 
     <!-- Delivery Coverage Section -->
-    <section class="py-20 bg-gradient-to-br from-polar-blue via-blue-600 to-polar-blue text-white relative overflow-hidden">
+    <section
+      class="py-20 bg-gradient-to-br from-polar-blue via-blue-600 to-polar-blue text-white relative overflow-hidden">
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
@@ -387,10 +442,10 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center mb-16">
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            We Deliver to All 7 Emirates
+            We deliver to most GCC countries
           </h2>
           <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Complete delivery coverage across the UAE with reliable service and express clearance
+            Complete delivery coverage across the GCC with reliable service and express clearance
           </p>
         </div>
 
@@ -398,9 +453,8 @@
           <!-- Left Side: Emirates Map Image -->
           <div class="order-2 lg:order-1">
             <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20">
-              <img src="./assets/images/hero/Emirates.png"
-                   alt="UAE Emirates Map"
-                   class="w-full h-auto rounded-2xl shadow-lg">
+              <img src="./assets/images/hero/emirates.avif" alt="GCC Emirates Map"
+                class="w-full h-auto rounded-2xl shadow-lg">
               <div class="mt-6 text-center">
                 <p class="text-sm text-white/80 italic">Powered by Emirates Post Group</p>
               </div>
@@ -410,68 +464,49 @@
           <!-- Right Side: Emirates Grid with Benefits -->
           <div class="order-1 lg:order-2">
             <div class="grid grid-cols-2 gap-4 mb-8">
-              <div class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+
+              <div
+                class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
                 <div class="flex items-center justify-center">
                   <svg class="w-5 h-5 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span class="text-lg font-semibold">Abu Dhabi</span>
+                  <span class="text-lg font-semibold">United Arab Emirates</span>
                 </div>
               </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <div
+                class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
                 <div class="flex items-center justify-center">
                   <svg class="w-5 h-5 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span class="text-lg font-semibold">Dubai</span>
+                  <span class="text-lg font-semibold">Kuwait</span>
                 </div>
               </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <div
+                class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
                 <div class="flex items-center justify-center">
                   <svg class="w-5 h-5 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span class="text-lg font-semibold">Sharjah</span>
+                  <span class="text-lg font-semibold">Oman</span>
                 </div>
               </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <div
+                class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
                 <div class="flex items-center justify-center">
                   <svg class="w-5 h-5 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span class="text-lg font-semibold">Ajman</span>
+                  <span class="text-lg font-semibold">Bahrain</span>
                 </div>
               </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-                <div class="flex items-center justify-center">
-                  <svg class="w-5 h-5 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-lg font-semibold">UAQ</span>
-                </div>
-              </div>
 
-              <div class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-                <div class="flex items-center justify-center">
-                  <svg class="w-5 h-5 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-lg font-semibold">RAK</span>
-                </div>
-              </div>
-
-              <div class="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 col-span-2">
-                <div class="flex items-center justify-center">
-                  <svg class="w-5 h-5 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-lg font-semibold">Fujairah</span>
-                </div>
-              </div>
+ 
             </div>
 
             <!-- Delivery Features -->
@@ -480,12 +515,14 @@
                 <div class="flex items-start">
                   <div class="bg-white/20 rounded-full p-3 mr-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                   </div>
                   <div>
                     <h4 class="text-lg font-bold mb-2">Express Delivery</h4>
-                    <p class="text-white/80 text-sm">Fast shipping to your doorstep in 3–10 business days across all Emirates</p>
+                    <p class="text-white/80 text-sm">Fast shipping to your doorstep in 5–10 business days across all
+                      Emirates</p>
                   </div>
                 </div>
               </div>
@@ -494,12 +531,15 @@
                 <div class="flex items-start">
                   <div class="bg-white/20 rounded-full p-3 mr-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                      </path>
                     </svg>
                   </div>
                   <div>
                     <h4 class="text-lg font-bold mb-2">Seamless Customs</h4>
-                    <p class="text-white/80 text-sm">Smooth customs clearance process through our official partnership</p>
+                    <p class="text-white/80 text-sm">Smooth customs clearance process through our official partnership
+                    </p>
                   </div>
                 </div>
               </div>
@@ -508,13 +548,16 @@
                 <div class="flex items-start">
                   <div class="bg-white/20 rounded-full p-3 mr-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                   </div>
                   <div>
                     <h4 class="text-lg font-bold mb-2">Door-to-Door Service</h4>
-                    <p class="text-white/80 text-sm">Reliable last-mile delivery to your home or office anywhere in the UAE</p>
+                    <p class="text-white/80 text-sm">Reliable last-mile delivery to your home or office anywhere in the
+                      GCC</p>
                   </div>
                 </div>
               </div>
@@ -634,7 +677,7 @@
                 </h3>
               </div>
               <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step1.desc">
-       
+
               </p>
             </div>
             <div class="lg:w-1/2">
@@ -653,7 +696,7 @@
                 </h3>
               </div>
               <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step2.desc">
-       
+
               </p>
             </div>
             <div class="lg:w-1/2">
@@ -691,7 +734,7 @@
                 </h3>
               </div>
               <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step4.desc">
- 
+
               </p>
             </div>
             <div class="lg:w-1/2">
@@ -710,7 +753,7 @@
                 </h3>
               </div>
               <p class="text-gray-600 leading-relaxed" x-text="translations[language].howItWorks.step5.desc">
-      
+
               </p>
             </div>
             <div class="lg:w-1/2">
@@ -804,7 +847,7 @@
           <p class="text-gray-400 mb-4" x-text="translations[language].footer.tagline">
           </p>
 
-      
+
         </div>
 
         <!-- Quick Links -->
@@ -850,7 +893,7 @@
                 class="text-gray-400 hover:text-white py-2"
                 x-text="translations[language].footer.servicesList.shopping"></a>
             </li>
-           
+
             <li>
               <a href="https://en.polexp.com/insurance.html" target="_blank" rel="noopener"
                 class="text-gray-400 hover:text-white py-2"
@@ -903,7 +946,209 @@
 
   <!-- Smooth Scrolling -->
   <script>
-    function animateCounter(e){const t=+e.getAttribute("data-target"),a=Math.round(2e3/(1e3/30));let o=0;const s=e.textContent.trim().endsWith("+"),r=setInterval((()=>{o++;const n=o/a,i=Math.round(t*n);let l=t>1e3?i.toLocaleString():i;if(s&&(l+="+"),e.textContent=l,o===a){clearInterval(r);let a=t>1e3?t.toLocaleString():t;s&&(a+="+"),e.textContent=a}}),1e3/30)}document.querySelectorAll('a[href^="#"]').forEach((e=>{e.addEventListener("click",(function(e){e.preventDefault();const t=document.querySelector(this.getAttribute("href"));t&&t.scrollIntoView({behavior:"smooth",block:"start"})}))}));const counters=document.querySelectorAll(".counter"),observer=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting&&(animateCounter(e.target),observer.unobserve(e.target))}))}),{threshold:.5});counters.forEach((e=>observer.observe(e))),window.appData={mobileMenuOpen:!1,language:"en",activeShopRegion:"us",translations:{en:{title:"Shop Worldwide — Receive in UAE",subtitle:"Easily shop from U.S. and Canadian stores that don’t ship to UAE. With your own overseas warehouse address, enjoy fast, reliable forwarding straight to your doorstep in UAE.",cta:"Get Your Free U.S. or Canadian Shipping Address",stats:{parcels:"Parcels Delivered",countries:"Countries Served",years:"Years in Service"},howItWorks:{title:"How It Works",subtitle:"Your international shopping made simple in 5 easy steps",step1:{title:"Create Your Account",desc:"Register on our website in just a few minutes. As soon as you sign up, you’ll receive your own dedicated U.S. and Canadian warehouse addresses. No long forms, no hidden fees — just instant access to start shopping abroad."},step2:{title:"Shop U.S. & Canadian Stores",desc:"Browse American and Canadian retailers for products not available in UAE — fashion, electronics, supplements, lifestyle goods, and more. At checkout, simply enter your personal U.S. or Canadian address, and shop like a local."},step3:{title:"We Receive Your Packages",desc:"Your orders arrive at our secure warehouses in the U.S. or Canada. Every parcel is checked, logged into your account, and safely stored until you’re ready to ship. You’ll get updates and photos, so you always know what’s waiting."},step4:{title:"Parcel Management Made Easy",desc:"Combine multiple purchases into a single shipment to save on international delivery costs. Request extra protective packaging, labeling, or special handling for fragile items. Our flexible services give you full control over your packages."},step5:{title:"Fast Delivery to UAE",desc:"Once you’re ready, we forward your parcels directly to your home or office in UAE. With reliable shipping partners, full tracking, customs clearance support, and competitive rates, your purchases arrive quickly and securely."}},products:{title:"Available Goods from the USA and Canada",subtitle:"Shop electronics, fashion, home goods, and more from top international brands",items:{phones:{title:"Phones",desc:"Latest smartphones and accessories",price:"From $199",tag:"Popular",tagColor:"bg-polar-blue",image:"Iphone.avif"},handbags:{title:"Handbags",desc:"Luxury bags and accessories",price:"From $80",tag:"Premium",tagColor:"bg-pink-600",image:"Handbag.avif"},glasses:{title:"Glasses",desc:"Sunglasses and eyewear from top brands",price:"From $30",tag:"New",tagColor:"bg-yellow-400 text-gray-800",image:"Glasses.avif"},tools:{title:"Tools",desc:"Power tools and DIY essentials",price:"From $40",tag:"Trending",tagColor:"bg-green-600",image:"power-tool.avif"},computers:{title:"Computers",desc:"Laptops, desktops, and parts",price:"From $300",tag:"Hot",tagColor:"bg-polar-blue",image:"Computer.avif"},makeup:{title:"Makeup",desc:"Cosmetics and beauty products",price:"From $15",tag:"Beauty",tagColor:"bg-pink-500",image:"Makeup.avif"},cameras:{title:"Cameras",desc:"Photography gear and accessories",price:"From $100",tag:"Best",tagColor:"bg-yellow-500",image:"Camera.avif"},sports:{title:"Sports",desc:"Sports gear and equipment",price:"From $20",tag:"Active",tagColor:"bg-green-500",image:"Sports.avif"}}},nav:{home:"Home",shops:"Shops",howItWorks:"How It Works",products:"Products",contact:"Contact"},footer:{tagline:"Your trusted partner for international shipping from the USA and Canada to UAE.",quickLinks:"Quick Links",services:"Services",contactInfo:"Contact Info",rights:"© ПЭ 2025. All rights reserved.",privacy:"Data Privacy",userAgreement:"User Agreement",servicesList:{forwarding:"Sending parcels",consolidation:"Parcel delivery",shopping:"Virtual addresses",customs:"Help with purchasing",express:"Parcel insurance"},websiteLinks:{contacts:"Contacts",calculator:"Calculator",dashboard:"Dashboard",login:"Login"}},ctaSection:{title:"Ready to Start Shopping Globally?",subtitle:"Join thousands of customers who trust Polar Express for their international shopping needs. Get your free virtual addresses today and start shopping from the USA and Canada.",buttonPrimary:"Get Free Virtual Address",buttonSecondary:"Learn More About Us"},shops:{title:"Shop from Top Retailers",subtitle:"Access thousands of brands from the USA and Canada",uae:"UAE Shops",us:"US Shops",canada:"Canada Shops",list:{amazonUS:"World's largest online marketplace",nike:"Athletic footwear and apparel",bestbuy:"Electronics and technology",macys:"Store for fashion and home",walmart:"Everyday low prices on everything",target:"Trendy fashion and essentials",kohls:"Apparel, shoes, and home goods",staples:"Office supplies and technology",aritzia:"Women’s fashion and lifestyle brand",memoryexpress:"Computers, parts, and electronics",mec:"Outdoor gear and equipment",roots:"Casual wear and leather goods",sportchek:"Sports equipment and activewear",timhortons:"Coffee, donuts, and fast food",well:"Health and wellness essentials online",canadianTire:"Automotive, sports, and home goods"}}}}};
+    function animateCounter(e) {
+      const t = +e.getAttribute("data-target"),
+        a = Math.round(2e3 / (1e3 / 30));
+      let o = 0;
+      const s = e.textContent.trim().endsWith("+"),
+        r = setInterval(() => {
+          o++;
+          const n = o / a,
+            i = Math.round(t * n);
+          let l = t > 1e3 ? i.toLocaleString() : i;
+          if ((s && (l += "+"), (e.textContent = l), o === a)) {
+            clearInterval(r);
+            let a = t > 1e3 ? t.toLocaleString() : t;
+            s && (a += "+"), (e.textContent = a);
+          }
+        }, 1e3 / 30);
+    }
+    document.querySelectorAll('a[href^="#"]').forEach((e) => {
+      e.addEventListener("click", function (e) {
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute("href"));
+        t && t.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+    const counters = document.querySelectorAll(".counter"),
+      observer = new IntersectionObserver(
+        (e) => {
+          e.forEach((e) => {
+            e.isIntersecting && (animateCounter(e.target), observer.unobserve(e.target));
+          });
+        },
+        { threshold: 0.5 }
+      );
+    counters.forEach((e) => observer.observe(e)),
+      (window.appData = {
+        mobileMenuOpen: !1,
+        language: "en",
+        activeShopRegion: "us",
+        translations: {
+          en: {
+            title: "Shop Worldwide — Receive in GCC",
+            subtitle:
+              "Easily shop from U.S. and Canadian stores that don’t ship to the GCC. With your own overseas warehouse address, enjoy fast, reliable forwarding straight to your doorstep in the United Arab Emirates (UAE), Kuwait, Oman, Bahrain.",
+            cta: "Get Your Free U.S. or Canadian Shipping Address",
+            stats: { parcels: "Parcels Delivered", countries: "Countries Served", years: "Years in Service" },
+            howItWorks: {
+              title: "How It Works",
+              subtitle: "Your international shopping made simple in 5 easy steps",
+              step1: {
+                title: "Create Your Account",
+                desc: "Register on our website in just a few minutes. As soon as you sign up, you’ll receive your own dedicated U.S. and Canadian warehouse addresses. No long forms, no hidden fees — just instant access to start shopping abroad.",
+              },
+              step2: {
+                title: "Shop U.S. & Canadian Stores",
+                desc: "Browse American and Canadian retailers for products not available in GCC — fashion, electronics, supplements, lifestyle goods, and more. At checkout, simply enter your personal U.S. or Canadian address, and shop like a local.",
+              },
+              step3: {
+                title: "We Receive Your Packages",
+                desc: "Your orders arrive at our secure warehouses in the U.S. or Canada. Every parcel is checked, logged into your account, and safely stored until you’re ready to ship. You’ll get updates and photos, so you always know what’s waiting.",
+              },
+              step4: {
+                title: "Parcel Management Made Easy",
+                desc: "Combine multiple purchases into a single shipment to save on international delivery costs. Request extra protective packaging, labeling, or special handling for fragile items. Our flexible services give you full control over your packages.",
+              },
+              step5: {
+                title: "Fast Delivery to GCC in 5-10 days",
+                desc: "Once you’re ready, we forward your parcels directly to your home or office in GCC. With reliable shipping partners, full tracking, customs clearance support, and competitive rates, your purchases arrive quickly and securely.",
+              },
+            },
+            products: {
+              title: "Available Goods from the USA and Canada",
+              subtitle: "Shop electronics, fashion, home goods, and more from top international brands",
+              items: {
+                phones: {
+                  title: "Phones",
+                  desc: "Latest smartphones and accessories",
+                  price: "From $199",
+                  tag: "Popular",
+                  tagColor: "bg-polar-blue",
+                  image: "Iphone.avif",
+                },
+                handbags: {
+                  title: "Handbags",
+                  desc: "Luxury bags and accessories",
+                  price: "From $80",
+                  tag: "Premium",
+                  tagColor: "bg-pink-600",
+                  image: "Handbag.avif",
+                },
+                glasses: {
+                  title: "Glasses",
+                  desc: "Sunglasses and eyewear from top brands",
+                  price: "From $30",
+                  tag: "New",
+                  tagColor: "bg-yellow-400 text-gray-800",
+                  image: "Glasses.avif",
+                },
+                tools: {
+                  title: "Tools",
+                  desc: "Power tools and DIY essentials",
+                  price: "From $40",
+                  tag: "Trending",
+                  tagColor: "bg-green-600",
+                  image: "power-tool.avif",
+                },
+                computers: {
+                  title: "Computers",
+                  desc: "Laptops, desktops, and parts",
+                  price: "From $300",
+                  tag: "Hot",
+                  tagColor: "bg-polar-blue",
+                  image: "Computer.avif",
+                },
+                makeup: {
+                  title: "Makeup",
+                  desc: "Cosmetics and beauty products",
+                  price: "From $15",
+                  tag: "Beauty",
+                  tagColor: "bg-pink-500",
+                  image: "Makeup.avif",
+                },
+                cameras: {
+                  title: "Cameras",
+                  desc: "Photography gear and accessories",
+                  price: "From $100",
+                  tag: "Best",
+                  tagColor: "bg-yellow-500",
+                  image: "Camera.avif",
+                },
+                sports: {
+                  title: "Sports",
+                  desc: "Sports gear and equipment",
+                  price: "From $20",
+                  tag: "Active",
+                  tagColor: "bg-green-500",
+                  image: "Sports.avif",
+                },
+              },
+            },
+            nav: {
+              home: "Home",
+              shops: "Shops",
+              howItWorks: "How It Works",
+              products: "Products",
+              contact: "Contact",
+            },
+            footer: {
+              tagline: "Your trusted partner for international shipping from the USA and Canada to GCC.",
+              quickLinks: "Quick Links",
+              services: "Services",
+              contactInfo: "Contact Info",
+              rights: "© ПЭ 2025. All rights reserved.",
+              privacy: "Data Privacy",
+              userAgreement: "User Agreement",
+              servicesList: {
+                forwarding: "Sending parcels",
+                consolidation: "Parcel delivery",
+                shopping: "Virtual addresses",
+                customs: "Help with purchasing",
+                express: "Parcel insurance",
+              },
+              websiteLinks: {
+                contacts: "Contacts",
+                calculator: "Calculator",
+                dashboard: "Dashboard",
+                login: "Login",
+              },
+            },
+            ctaSection: {
+              title: "Ready to Start Shopping Globally?",
+              subtitle:
+                "Join thousands of customers who trust Polar Express for their international shopping needs. Get your free virtual addresses today and start shopping from the USA and Canada.",
+              buttonPrimary: "Get Free Virtual Address",
+              buttonSecondary: "Learn More About Us",
+            },
+            shops: {
+              title: "Shop from Top Retailers",
+              subtitle: "Access thousands of brands from the USA and Canada",
+              GCC: "GCC Shops",
+              us: "US Shops",
+              canada: "Canada Shops",
+              list: {
+                amazonUS: "World's largest online marketplace",
+                nike: "Athletic footwear and apparel",
+                bestbuy: "Electronics and technology",
+                macys: "Store for fashion and home",
+                walmart: "Everyday low prices on everything",
+                target: "Trendy fashion and essentials",
+                kohls: "Apparel, shoes, and home goods",
+                staples: "Office supplies and technology",
+                aritzia: "Women’s fashion and lifestyle brand",
+                memoryexpress: "Computers, parts, and electronics",
+                mec: "Outdoor gear and equipment",
+                roots: "Casual wear and leather goods",
+                sportchek: "Sports equipment and activewear",
+                timhortons: "Coffee, donuts, and fast food",
+                well: "Health and wellness essentials online",
+                canadianTire: "Automotive, sports, and home goods",
+              },
+            },
+          },
+        },
+      });
   </script>
 </body>
 
